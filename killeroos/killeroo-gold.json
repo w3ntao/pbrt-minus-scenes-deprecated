@@ -1,0 +1,310 @@
+{
+    "token_0": [
+        "LookAt",
+        "200",
+        "250",
+        "70",
+        "0",
+        "33",
+        "-50",
+        "0",
+        "0",
+        "1"
+    ],
+    "token_1": [
+        "Camera",
+        "perspective",
+        "float fov",
+        [
+            "38"
+        ]
+    ],
+    "token_2": [
+        "Film",
+        "rgb",
+        "string filename",
+        [
+            "killeroo-gold.png"
+        ],
+        "integer yresolution",
+        [
+            "1026"
+        ],
+        "integer xresolution",
+        [
+            "1368"
+        ]
+    ],
+    "token_3": [
+        "Sampler",
+        "halton",
+        "integer pixelsamples",
+        [
+            "16"
+        ]
+    ],
+    "token_4": [
+        "WorldBegin"
+    ],
+    "token_5": [
+        "AttributeBegin"
+    ],
+    "token_6": [
+        "Material",
+        "diffuse",
+        "rgb reflectance",
+        [
+            "0",
+            "0",
+            "0"
+        ]
+    ],
+    "token_7": [
+        "AreaLightSource",
+        "diffuse",
+        "rgb L",
+        [
+            "50",
+            "50",
+            "50"
+        ]
+    ],
+    "token_8": [
+        "Translate",
+        "0",
+        "0",
+        "800"
+    ],
+    "token_9": [
+        "ReverseOrientation"
+    ],
+    "token_10": [
+        "Shape",
+        "disk",
+        "float radius",
+        [
+            "150"
+        ]
+    ],
+    "token_11": [
+        "AttributeEnd"
+    ],
+    "token_12": [
+        "AttributeBegin"
+    ],
+    "token_13": [
+        "CoordSysTransform",
+        "camera"
+    ],
+    "token_14": [
+        "LightSource",
+        "distant",
+        "rgb L",
+        [
+            "0.2",
+            "0.2",
+            "0.2"
+        ]
+    ],
+    "token_15": [
+        "AttributeEnd"
+    ],
+    "token_16": [
+        "AttributeBegin"
+    ],
+    "token_17": [
+        "Material",
+        "diffuse",
+        "rgb reflectance",
+        [
+            "0.5",
+            "0.5",
+            "0.5"
+        ]
+    ],
+    "token_18": [
+        "Translate",
+        "0",
+        "0",
+        "-140"
+    ],
+    "token_19": [
+        "Texture",
+        "grid",
+        "spectrum",
+        "imagemap",
+        "string filename",
+        [
+            "textures/lines.png"
+        ]
+    ],
+    "token_20": [
+        "Texture",
+        "sgrid",
+        "spectrum",
+        "scale",
+        "float scale",
+        [
+            "0.5"
+        ],
+        "texture tex",
+        [
+            "grid"
+        ]
+    ],
+    "token_21": [
+        "Material",
+        "diffuse",
+        "texture reflectance",
+        [
+            "sgrid"
+        ]
+    ],
+    "token_22": [
+        "Shape",
+        "trianglemesh",
+        "point2 uv",
+        [
+            "0",
+            "0",
+            "5",
+            "0",
+            "5",
+            "5",
+            "0",
+            "5"
+        ],
+        "integer indices",
+        [
+            "0",
+            "1",
+            "2",
+            "2",
+            "3",
+            "0"
+        ],
+        "point3 P",
+        [
+            "-400",
+            "-400",
+            "0",
+            "400",
+            "-400",
+            "0",
+            "400",
+            "400",
+            "0",
+            "-400",
+            "400",
+            "0"
+        ]
+    ],
+    "token_23": [
+        "Shape",
+        "trianglemesh",
+        "point2 uv",
+        [
+            "0",
+            "0",
+            "5",
+            "0",
+            "5",
+            "5",
+            "0",
+            "5"
+        ],
+        "integer indices",
+        [
+            "0",
+            "1",
+            "2",
+            "2",
+            "3",
+            "0"
+        ],
+        "point3 P",
+        [
+            "-400",
+            "-400",
+            "0",
+            "400",
+            "-400",
+            "0",
+            "400",
+            "-400",
+            "1000",
+            "-400",
+            "-400",
+            "1000"
+        ]
+    ],
+    "token_24": [
+        "Shape",
+        "trianglemesh",
+        "point2 uv",
+        [
+            "0",
+            "0",
+            "5",
+            "0",
+            "5",
+            "5",
+            "0",
+            "5"
+        ],
+        "integer indices",
+        [
+            "0",
+            "1",
+            "2",
+            "2",
+            "3",
+            "0"
+        ],
+        "point3 P",
+        [
+            "-400",
+            "-400",
+            "0",
+            "-400",
+            "400",
+            "0",
+            "-400",
+            "400",
+            "1000",
+            "-400",
+            "-400",
+            "1000"
+        ]
+    ],
+    "token_25": [
+        "AttributeEnd"
+    ],
+    "token_26": [
+        "AttributeBegin"
+    ],
+    "token_27": [
+        "Material",
+        "conductor",
+        "spectrum k",
+        [
+            "spds/Au.k.spd"
+        ],
+        "spectrum eta",
+        [
+            "spds/Au.eta.spd"
+        ],
+        "float roughness",
+        [
+            "0.002"
+        ]
+    ],
+    "token_28": [
+        "Include",
+        "geometry/killeroo3.json"
+    ],
+    "token_29": [
+        "AttributeEnd"
+    ],
+    "length": 30
+}
