@@ -186,9 +186,6 @@ if __name__ == '__main__':
     bash("mkdir -p {}".format(out_dir))
     for pbrt_file in glob("{}/*.pbrt".format(in_dir)):
         basename = os.path.basename(pbrt_file)
-        if basename != "killeroo-gold.pbrt":
-            print("skip `{}`".format(pbrt_file))
-            continue
-
         out_file = "{}/{}".format(out_dir, basename.replace(".pbrt", ".json"))
         convert_pbrt(out_file, pbrt_file)
+

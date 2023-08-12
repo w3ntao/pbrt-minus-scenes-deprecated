@@ -24,7 +24,7 @@
         "rgb",
         "string filename",
         [
-            "killeroo-gold.png"
+            "killeroo-coated-gold.exr"
         ],
         "integer yresolution",
         [
@@ -40,7 +40,7 @@
         "halton",
         "integer pixelsamples",
         [
-            "4"
+            "512"
         ]
     ],
     "token_4": [
@@ -200,33 +200,115 @@
         ]
     ],
     "token_23": [
-        "AttributeEnd"
+        "Shape",
+        "trianglemesh",
+        "point2 uv",
+        [
+            "0",
+            "0",
+            "5",
+            "0",
+            "5",
+            "5",
+            "0",
+            "5"
+        ],
+        "integer indices",
+        [
+            "0",
+            "1",
+            "2",
+            "2",
+            "3",
+            "0"
+        ],
+        "point3 P",
+        [
+            "-400",
+            "-400",
+            "0",
+            "400",
+            "-400",
+            "0",
+            "400",
+            "-400",
+            "1000",
+            "-400",
+            "-400",
+            "1000"
+        ]
     ],
     "token_24": [
-        "AttributeBegin"
+        "Shape",
+        "trianglemesh",
+        "point2 uv",
+        [
+            "0",
+            "0",
+            "5",
+            "0",
+            "5",
+            "5",
+            "0",
+            "5"
+        ],
+        "integer indices",
+        [
+            "0",
+            "1",
+            "2",
+            "2",
+            "3",
+            "0"
+        ],
+        "point3 P",
+        [
+            "-400",
+            "-400",
+            "0",
+            "-400",
+            "400",
+            "0",
+            "-400",
+            "400",
+            "1000",
+            "-400",
+            "-400",
+            "1000"
+        ]
     ],
     "token_25": [
+        "AttributeEnd"
+    ],
+    "token_26": [
+        "AttributeBegin"
+    ],
+    "token_27": [
         "Material",
-        "conductor",
-        "spectrum k",
+        "coatedconductor",
+        "spectrum conductor.k",
         [
             "spds/Au.k.spd"
         ],
-        "spectrum eta",
+        "spectrum conductor.eta",
         [
             "spds/Au.eta.spd"
         ],
-        "float roughness",
+        "float interface.roughness",
+        [
+            "0.02"
+        ],
+        "float conductor.roughness",
         [
             "0.002"
         ]
     ],
-    "token_26": [
+    "token_28": [
         "Include",
         "geometry/killeroo3.json"
     ],
-    "token_27": [
+    "token_29": [
         "AttributeEnd"
     ],
-    "length": 28
+    "length": 30
 }

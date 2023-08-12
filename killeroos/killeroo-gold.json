@@ -24,7 +24,7 @@
         "rgb",
         "string filename",
         [
-            "killeroo-gold.png"
+            "killeroo-gold.exr"
         ],
         "integer yresolution",
         [
@@ -40,7 +40,7 @@
         "halton",
         "integer pixelsamples",
         [
-            "16"
+            "512"
         ]
     ],
     "token_4": [
