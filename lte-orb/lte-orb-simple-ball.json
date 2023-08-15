@@ -1,0 +1,94 @@
+{
+    "token_0": [
+        "Film",
+        "gbuffer",
+        "string filename",
+        "lte-orb-simple-ball.exr",
+        "integer yresolution",
+        [
+            "1200"
+        ],
+        "integer xresolution",
+        [
+            "1200"
+        ]
+    ],
+    "token_1": [
+        "Scale",
+        "-1",
+        "1",
+        "1"
+    ],
+    "token_2": [
+        "LookAt",
+        "0.2",
+        "0.4",
+        "-0.5",
+        "0",
+        "0.1",
+        "0",
+        "0",
+        "1",
+        "0"
+    ],
+    "token_3": [
+        "Camera",
+        "perspective",
+        "float fov",
+        [
+            "37"
+        ]
+    ],
+    "token_4": [
+        "Sampler",
+        "halton",
+        "integer pixelsamples",
+        [
+            "1024"
+        ]
+    ],
+    "token_5": [
+        "WorldBegin"
+    ],
+    "token_6": [
+        "AttributeBegin"
+    ],
+    "token_7": [
+        "Rotate",
+        "-90",
+        "1",
+        "0",
+        "0"
+    ],
+    "token_8": [
+        "LightSource",
+        "infinite",
+        "string filename",
+        "textures/small_rural_road_equiarea.exr",
+        "float scale",
+        "1.4"
+    ],
+    "token_9": [
+        "AttributeEnd"
+    ],
+    "token_10": [
+        "ReverseOrientation"
+    ],
+    "token_11": [
+        "MakeNamedMaterial"
+    ],
+    "token_12": [
+        "Material",
+        "string type",
+        [
+            "measured"
+        ],
+        "string filename",
+        "bsdfs/cc_ibiza_sunset_spec.bsdf"
+    ],
+    "token_13": [
+        "Include",
+        "geometry/geometry-simple.json"
+    ],
+    "length": 14
+}

@@ -140,6 +140,12 @@ def cancel_brackets(token_list: list[str]) -> list[str]:
     if "[" not in token_list:
         return token_list
 
+    if token_list[-1] != "]" and token_list[-1].endswith("]"):
+        # a ad hoc fix for `pbrt-v4-scenes/lte-orb/geometry/geometry-simple.pbrt`
+        # to split ".1]" into ".1" and "]"
+        token_list[-1] = token_list[-1][:-1]
+        token_list.append("]")
+
     start_bracket_idx = token_list.index("[")
     end_bracket_idx = token_list.index("]")
 
@@ -150,8 +156,6 @@ def cancel_brackets(token_list: list[str]) -> list[str]:
 
 
 def convert_pbrt(out_file: str, pbrt_file: str):
-    print("parse `{}`".format(pbrt_file))
-
     with open(pbrt_file) as f:
         content = f.read().splitlines()
 
@@ -179,13 +183,25 @@ def convert_pbrt(out_file: str, pbrt_file: str):
     print("json file saved to `{}`".format(out_file))
 
 
+def should_ignore(pbrt_file: str) -> bool:
+    if pbrt_file.endswith("killeroo-moving.pbrt"):
+        # we don't deal with animation
+        return True
+
+    return False
+
+
 if __name__ == '__main__':
-    in_dir = "../pbrt-v4-scenes/killeroos"
-    out_dir = "killeroos"
+    root_dir = "../pbrt-v4-scenes"
+    folder = "lte-orb"
 
-    bash("mkdir -p {}".format(out_dir))
-    for pbrt_file in glob("{}/*.pbrt".format(in_dir)):
+    bash("mkdir -p {}".format(folder))
+    for pbrt_file in glob("{}/{}/*.pbrt".format(root_dir, folder)):
+        if should_ignore(pbrt_file):
+            continue
+        print("parsing `{}`".format(pbrt_file))
+
         basename = os.path.basename(pbrt_file)
-        out_file = "{}/{}".format(out_dir, basename.replace(".pbrt", ".json"))
+        out_file = "{}/{}".format(folder, basename.replace(".pbrt", ".json"))
         convert_pbrt(out_file, pbrt_file)
-
+        print("done `{}`\n".format(pbrt_file))
