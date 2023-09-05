@@ -184,7 +184,7 @@ def convert_pbrt(out_file: str, pbrt_file: str):
 
 
 def should_ignore(pbrt_file: str) -> bool:
-    if pbrt_file.endswith("killeroo-moving.pbrt"):
+    if pbrt_file.endswith("killeroos/killeroo-moving.pbrt"):
         # we don't deal with animation
         return True
 
@@ -193,15 +193,31 @@ def should_ignore(pbrt_file: str) -> bool:
 
 if __name__ == '__main__':
     root_dir = "../pbrt-v4-scenes"
-    folder = "lte-orb"
+    folder_list = ["killeroos", "ganesha", "lte-orb", "sssdragon"]
+    #folder_list = ["ganesha", "sssdragon"]
 
-    bash("mkdir -p {}".format(folder))
-    for pbrt_file in glob("{}/{}/*.pbrt".format(root_dir, folder)):
-        if should_ignore(pbrt_file):
-            continue
-        print("parsing `{}`".format(pbrt_file))
+    for folder in folder_list:
+        bash("mkdir -p {}".format(folder))
+        for pbrt_file in glob("{}/{}/*.pbrt".format(root_dir, folder)):
+            if should_ignore(pbrt_file):
+                continue
+            print("parsing `{}`".format(pbrt_file))
 
-        basename = os.path.basename(pbrt_file)
-        out_file = "{}/{}".format(folder, basename.replace(".pbrt", ".json"))
-        convert_pbrt(out_file, pbrt_file)
-        print("done `{}`\n".format(pbrt_file))
+            basename = os.path.basename(pbrt_file)
+            out_file = "{}/{}".format(folder, basename.replace(".pbrt", ".json"))
+            convert_pbrt(out_file, pbrt_file)
+
+            for subdir in glob("{}/{}/*".format(root_dir, folder)):
+                if not os.path.isdir(subdir):
+                    continue
+                #print("subdir: {}".format(subdir))
+                if os.path.basename(subdir) == "geometry":
+                    bash("mkdir -p ./{}/geometry".format(folder))
+                    for ply_file in glob("{}/*.ply.gz".format(subdir)):
+                        #print("ply: {}".format(red(ply_file)))
+                        bash("cp {} ./{}/geometry/".format(ply_file, folder))
+                    continue
+
+                #print("do nothing for {}".format(red(subdir)))
+
+        print()
