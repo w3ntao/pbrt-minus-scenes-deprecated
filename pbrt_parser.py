@@ -194,7 +194,7 @@ def should_ignore(pbrt_file: str) -> bool:
 if __name__ == '__main__':
     root_dir = "../pbrt-v4-scenes"
     folder_list = ["killeroos", "ganesha", "lte-orb", "sssdragon"]
-    #folder_list = ["ganesha", "sssdragon"]
+    # folder_list = ["ganesha", "sssdragon"]
 
     for folder in folder_list:
         bash("mkdir -p {}".format(folder))
@@ -210,14 +210,14 @@ if __name__ == '__main__':
             for subdir in glob("{}/{}/*".format(root_dir, folder)):
                 if not os.path.isdir(subdir):
                     continue
-                #print("subdir: {}".format(subdir))
+                # print("subdir: {}".format(subdir))
                 if os.path.basename(subdir) == "geometry":
                     bash("mkdir -p ./{}/geometry".format(folder))
                     for ply_file in glob("{}/*.ply.gz".format(subdir)):
-                        #print("ply: {}".format(red(ply_file)))
+                        # print("ply: {}".format(red(ply_file)))
                         bash("cp {} ./{}/geometry/".format(ply_file, folder))
                     continue
 
-                #print("do nothing for {}".format(red(subdir)))
+                # print("do nothing for {}".format(red(subdir)))
 
         print()
