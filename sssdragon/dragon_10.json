@@ -1,0 +1,150 @@
+{
+    "token_0": [
+        "Sampler",
+        "halton",
+        "integer pixelsamples",
+        [
+            "1024"
+        ]
+    ],
+    "token_1": [
+        "PixelFilter",
+        "gaussian"
+    ],
+    "token_2": [
+        "Film",
+        "rgb",
+        "float iso",
+        "400",
+        "string filename",
+        [
+            "dragon_10.exr"
+        ],
+        "integer yresolution",
+        [
+            "1024"
+        ],
+        "integer xresolution",
+        [
+            "1366"
+        ]
+    ],
+    "token_3": [
+        "Scale",
+        "-1",
+        "1",
+        "1"
+    ],
+    "token_4": [
+        "LookAt",
+        "3.69558",
+        "-3.46243",
+        "3.25463",
+        "3.04072",
+        "-2.85176",
+        "2.80939",
+        "-0.317366",
+        "0.312466",
+        "0.895346"
+    ],
+    "token_5": [
+        "Camera",
+        "perspective",
+        "float fov",
+        [
+            "28.841503"
+        ]
+    ],
+    "token_6": [
+        "WorldBegin"
+    ],
+    "token_7": [
+        "AttributeBegin"
+    ],
+    "token_8": [
+        "LightSource",
+        "infinite",
+        "string filename",
+        "textures/small_rural_road_equiarea.exr"
+    ],
+    "token_9": [
+        "AttributeEnd"
+    ],
+    "token_10": [
+        "AttributeBegin"
+    ],
+    "token_11": [
+        "Translate",
+        "0.2",
+        "0.3",
+        "0.78"
+    ],
+    "token_12": [
+        "Rotate",
+        "90",
+        "1",
+        "0",
+        "0"
+    ],
+    "token_13": [
+        "Rotate",
+        "-90",
+        "0",
+        "1",
+        "0"
+    ],
+    "token_14": [
+        "Scale",
+        "0.02",
+        "0.02",
+        "0.02"
+    ],
+    "token_15": [
+        "Material",
+        "subsurface",
+        "float scale",
+        [
+            "10"
+        ],
+        "string name",
+        [
+            "Skin1"
+        ],
+        "float eta",
+        [
+            "1.5"
+        ]
+    ],
+    "token_16": [
+        "Shape",
+        "plymesh",
+        "string filename",
+        [
+            "geometry/dragon.ply.gz"
+        ]
+    ],
+    "token_17": [
+        "AttributeEnd"
+    ],
+    "token_18": [
+        "AttributeBegin"
+    ],
+    "token_19": [
+        "Material",
+        "coateddiffuse",
+        "float roughness",
+        ".2"
+    ],
+    "token_20": [
+        "Shape",
+        "plymesh",
+        "string filename",
+        [
+            "geometry/meshes_0.ply"
+        ]
+    ],
+    "token_21": [
+        "AttributeEnd"
+    ],
+    "length": 22
+}

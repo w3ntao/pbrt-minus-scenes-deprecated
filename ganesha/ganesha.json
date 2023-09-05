@@ -1,0 +1,258 @@
+{
+    "token_0": [
+        "Sampler",
+        "halton",
+        "integer pixelsamples",
+        [
+            "512"
+        ]
+    ],
+    "token_1": [
+        "PixelFilter",
+        "gaussian"
+    ],
+    "token_2": [
+        "Film",
+        "rgb",
+        "string filename",
+        [
+            "ganesha.exr"
+        ],
+        "integer yresolution",
+        [
+            "1440"
+        ],
+        "integer xresolution",
+        [
+            "1440"
+        ]
+    ],
+    "token_3": [
+        "Scale",
+        "-1",
+        "1",
+        "1"
+    ],
+    "token_4": [
+        "LookAt",
+        "328",
+        "40.282",
+        "245",
+        "328",
+        "10",
+        "0",
+        "-0.00212272",
+        "0.998201",
+        "-0.0599264"
+    ],
+    "token_5": [
+        "Camera",
+        "perspective",
+        "float fov",
+        [
+            "30"
+        ]
+    ],
+    "token_6": [
+        "WorldBegin"
+    ],
+    "token_7": [
+        "Shape",
+        "trianglemesh",
+        "integer indices",
+        [
+            "0",
+            "1",
+            "2",
+            "0",
+            "2",
+            "3"
+        ],
+        "point3 P",
+        [
+            "-672",
+            "-41.999958",
+            "1000",
+            "1328",
+            "-41.999958",
+            "1000",
+            "1328",
+            "-42.000042",
+            "-1000",
+            "-672",
+            "-42.000042",
+            "-1000"
+        ]
+    ],
+    "token_8": [
+        "AttributeBegin"
+    ],
+    "token_9": [
+        "Transform",
+        [
+            "0",
+            "0",
+            "-1",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1"
+        ]
+    ],
+    "token_10": [
+        "LightSource",
+        "infinite",
+        "float scale",
+        "[0.1]",
+        "string filename",
+        "textures/sky.exr"
+    ],
+    "token_11": [
+        "AttributeEnd"
+    ],
+    "token_12": [
+        "AttributeBegin"
+    ],
+    "token_13": [
+        "AreaLightSource",
+        "diffuse",
+        "rgb L",
+        [
+            "15.258819",
+            "12.083925",
+            "9.589462"
+        ]
+    ],
+    "token_14": [
+        "Shape",
+        "trianglemesh",
+        "integer indices",
+        [
+            "0",
+            "1",
+            "2",
+            "0",
+            "2",
+            "3"
+        ],
+        "point3 P",
+        [
+            "220",
+            "61.367302",
+            "-343.62833",
+            "400",
+            "61.367302",
+            "-343.62833",
+            "400",
+            "238.63269",
+            "-312.37167",
+            "220",
+            "238.63269",
+            "-312.37167"
+        ]
+    ],
+    "token_15": [
+        "AttributeEnd"
+    ],
+    "token_16": [
+        "AttributeBegin"
+    ],
+    "token_17": [
+        "AreaLightSource",
+        "diffuse",
+        "rgb L",
+        [
+            "15.258819",
+            "12.083925",
+            "9.589462"
+        ]
+    ],
+    "token_18": [
+        "ReverseOrientation"
+    ],
+    "token_19": [
+        "Shape",
+        "trianglemesh",
+        "integer indices",
+        [
+            "0",
+            "1",
+            "2",
+            "0",
+            "2",
+            "3"
+        ],
+        "point3 P",
+        [
+            "220",
+            "61.367302",
+            "343.62833",
+            "400",
+            "61.367302",
+            "343.62833",
+            "400",
+            "238.63269",
+            "312.37167",
+            "220",
+            "238.63269",
+            "312.37167"
+        ]
+    ],
+    "token_20": [
+        "AttributeEnd"
+    ],
+    "token_21": [
+        "Texture",
+        "tmap",
+        "spectrum",
+        "imagemap",
+        "string filename",
+        [
+            "textures/ganesha.png"
+        ]
+    ],
+    "token_22": [
+        "AttributeBegin"
+    ],
+    "token_23": [
+        "Material",
+        "coateddiffuse",
+        "bool remaproughness",
+        [
+            "false"
+        ],
+        "float vroughness",
+        [
+            "0.01"
+        ],
+        "float uroughness",
+        [
+            "0.01"
+        ],
+        "texture reflectance",
+        [
+            "tmap"
+        ]
+    ],
+    "token_24": [
+        "Shape",
+        "plymesh",
+        "string filename",
+        [
+            "geometry/ganesha.ply.gz"
+        ]
+    ],
+    "token_25": [
+        "AttributeEnd"
+    ],
+    "length": 26
+}

@@ -213,8 +213,7 @@ if __name__ == '__main__':
                 # print("subdir: {}".format(subdir))
                 if os.path.basename(subdir) == "geometry":
                     bash("mkdir -p ./{}/geometry".format(folder))
-                    for ply_file in glob("{}/*.ply.gz".format(subdir)):
-                        # print("ply: {}".format(red(ply_file)))
+                    for ply_file in glob("{}/*.ply*".format(subdir)):
                         bash("cp {} ./{}/geometry/".format(ply_file, folder))
                     continue
 
