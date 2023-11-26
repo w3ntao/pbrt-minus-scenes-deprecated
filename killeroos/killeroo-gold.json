@@ -24,7 +24,7 @@
         "rgb",
         "string filename",
         [
-            "killeroo-gold.exr"
+            "killeroo-gold.png"
         ],
         "integer yresolution",
         [
@@ -40,7 +40,7 @@
         "halton",
         "integer pixelsamples",
         [
-            "512"
+            "12"
         ]
     ],
     "token_4": [
@@ -113,22 +113,12 @@
         "AttributeBegin"
     ],
     "token_17": [
-        "Material",
-        "diffuse",
-        "rgb reflectance",
-        [
-            "0.5",
-            "0.5",
-            "0.5"
-        ]
-    ],
-    "token_18": [
         "Translate",
         "0",
         "0",
         "-140"
     ],
-    "token_19": [
+    "token_18": [
         "Texture",
         "grid",
         "spectrum",
@@ -138,7 +128,7 @@
             "textures/lines.png"
         ]
     ],
-    "token_20": [
+    "token_19": [
         "Texture",
         "sgrid",
         "spectrum",
@@ -152,12 +142,51 @@
             "grid"
         ]
     ],
-    "token_21": [
+    "token_20": [
         "Material",
         "diffuse",
         "texture reflectance",
         [
             "sgrid"
+        ]
+    ],
+    "token_21": [
+        "Shape",
+        "trianglemesh",
+        "point2 uv",
+        [
+            "0",
+            "0",
+            "5",
+            "0",
+            "5",
+            "5",
+            "0",
+            "5"
+        ],
+        "integer indices",
+        [
+            "0",
+            "1",
+            "2",
+            "2",
+            "3",
+            "0"
+        ],
+        "point3 P",
+        [
+            "-400",
+            "-400",
+            "0",
+            "400",
+            "-400",
+            "0",
+            "400",
+            "400",
+            "0",
+            "-400",
+            "400",
+            "0"
         ]
     ],
     "token_22": [
@@ -192,11 +221,11 @@
             "-400",
             "0",
             "400",
-            "400",
-            "0",
             "-400",
-            "400",
-            "0"
+            "1000",
+            "-400",
+            "-400",
+            "1000"
         ]
     ],
     "token_23": [
@@ -227,11 +256,11 @@
             "-400",
             "-400",
             "0",
-            "400",
             "-400",
+            "400",
             "0",
-            "400",
             "-400",
+            "400",
             "1000",
             "-400",
             "-400",
@@ -239,51 +268,12 @@
         ]
     ],
     "token_24": [
-        "Shape",
-        "trianglemesh",
-        "point2 uv",
-        [
-            "0",
-            "0",
-            "5",
-            "0",
-            "5",
-            "5",
-            "0",
-            "5"
-        ],
-        "integer indices",
-        [
-            "0",
-            "1",
-            "2",
-            "2",
-            "3",
-            "0"
-        ],
-        "point3 P",
-        [
-            "-400",
-            "-400",
-            "0",
-            "-400",
-            "400",
-            "0",
-            "-400",
-            "400",
-            "1000",
-            "-400",
-            "-400",
-            "1000"
-        ]
-    ],
-    "token_25": [
         "AttributeEnd"
     ],
-    "token_26": [
+    "token_25": [
         "AttributeBegin"
     ],
-    "token_27": [
+    "token_26": [
         "Material",
         "conductor",
         "spectrum k",
@@ -299,12 +289,12 @@
             "0.002"
         ]
     ],
-    "token_28": [
+    "token_27": [
         "Include",
         "geometry/killeroo3.json"
     ],
-    "token_29": [
+    "token_28": [
         "AttributeEnd"
     ],
-    "length": 30
+    "length": 29
 }

@@ -1,9 +1,9 @@
 {
     "token_0": [
         "Film",
-        "gbuffer",
+        "rgb",
         "string filename",
-        "lte-orb-simple-ball.exr",
+        "lte-orb-simple-ball.png",
         "integer yresolution",
         [
             "1200"
@@ -44,7 +44,7 @@
         "halton",
         "integer pixelsamples",
         [
-            "1024"
+            "32"
         ]
     ],
     "token_5": [

@@ -4,7 +4,7 @@
         "halton",
         "integer pixelsamples",
         [
-            "512"
+            "32"
         ]
     ],
     "token_1": [
@@ -16,7 +16,7 @@
         "rgb",
         "string filename",
         [
-            "ganesha.exr"
+            "ganesha.png"
         ],
         "integer yresolution",
         [
@@ -54,9 +54,13 @@
         ]
     ],
     "token_6": [
-        "WorldBegin"
+        "Integrator",
+        "ambientocclusion"
     ],
     "token_7": [
+        "WorldBegin"
+    ],
+    "token_8": [
         "Shape",
         "trianglemesh",
         "integer indices",
@@ -84,10 +88,10 @@
             "-1000"
         ]
     ],
-    "token_8": [
+    "token_9": [
         "AttributeBegin"
     ],
-    "token_9": [
+    "token_10": [
         "Transform",
         [
             "0",
@@ -108,7 +112,7 @@
             "1"
         ]
     ],
-    "token_10": [
+    "token_11": [
         "LightSource",
         "infinite",
         "float scale",
@@ -116,13 +120,13 @@
         "string filename",
         "textures/sky.exr"
     ],
-    "token_11": [
+    "token_12": [
         "AttributeEnd"
     ],
-    "token_12": [
+    "token_13": [
         "AttributeBegin"
     ],
-    "token_13": [
+    "token_14": [
         "AreaLightSource",
         "diffuse",
         "rgb L",
@@ -132,7 +136,7 @@
             "9.589462"
         ]
     ],
-    "token_14": [
+    "token_15": [
         "Shape",
         "trianglemesh",
         "integer indices",
@@ -160,13 +164,13 @@
             "-312.37167"
         ]
     ],
-    "token_15": [
+    "token_16": [
         "AttributeEnd"
     ],
-    "token_16": [
+    "token_17": [
         "AttributeBegin"
     ],
-    "token_17": [
+    "token_18": [
         "AreaLightSource",
         "diffuse",
         "rgb L",
@@ -176,10 +180,10 @@
             "9.589462"
         ]
     ],
-    "token_18": [
+    "token_19": [
         "ReverseOrientation"
     ],
-    "token_19": [
+    "token_20": [
         "Shape",
         "trianglemesh",
         "integer indices",
@@ -207,10 +211,10 @@
             "312.37167"
         ]
     ],
-    "token_20": [
+    "token_21": [
         "AttributeEnd"
     ],
-    "token_21": [
+    "token_22": [
         "Texture",
         "tmap",
         "spectrum",
@@ -220,10 +224,10 @@
             "textures/ganesha.png"
         ]
     ],
-    "token_22": [
+    "token_23": [
         "AttributeBegin"
     ],
-    "token_23": [
+    "token_24": [
         "Material",
         "coateddiffuse",
         "bool remaproughness",
@@ -243,7 +247,7 @@
             "tmap"
         ]
     ],
-    "token_24": [
+    "token_25": [
         "Shape",
         "plymesh",
         "string filename",
@@ -251,8 +255,8 @@
             "geometry/ganesha.ply.gz"
         ]
     ],
-    "token_25": [
+    "token_26": [
         "AttributeEnd"
     ],
-    "length": 26
+    "length": 27
 }

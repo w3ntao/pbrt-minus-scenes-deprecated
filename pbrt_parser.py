@@ -55,6 +55,10 @@ def red(text: str) -> str:
     return "\033[91m" + text + "\033[0m"
 
 
+def green(text: str) -> str:
+    return "\033[92m" + text + "\033[0m"
+
+
 def tokenize(content: list[str]) -> list[str]:
     tokens = []
     for line in content:
@@ -131,7 +135,7 @@ def split_by_keyword(tokens: list[str], out_root: str,
             semantic_tokens[idx][1] = "{}/{}".format(included_folder, basename)
 
     for token in sorted(set(upper_case_token)):
-        print("Did you miss parsing {} ?".format(red(token)))
+        print("did you miss parsing {} ?".format(red(token)))
 
     return semantic_tokens
 
@@ -194,14 +198,14 @@ def should_ignore(pbrt_file: str) -> bool:
 if __name__ == '__main__':
     root_dir = "../pbrt-v4-scenes"
     folder_list = ["killeroos", "ganesha", "lte-orb", "sssdragon"]
-    # folder_list = ["ganesha", "sssdragon"]
+    # folder_list = ["killeroos"]
 
     for folder in folder_list:
         bash("mkdir -p {}".format(folder))
         for pbrt_file in glob("{}/{}/*.pbrt".format(root_dir, folder)):
             if should_ignore(pbrt_file):
                 continue
-            print("parsing `{}`".format(pbrt_file))
+            print("parsing {}".format(green(pbrt_file)))
 
             basename = os.path.basename(pbrt_file)
             out_file = "{}/{}".format(folder, basename.replace(".pbrt", ".json"))
@@ -210,12 +214,20 @@ if __name__ == '__main__':
             for subdir in glob("{}/{}/*".format(root_dir, folder)):
                 if not os.path.isdir(subdir):
                     continue
+
+                dirname = os.path.basename(subdir)
                 # print("subdir: {}".format(subdir))
-                if os.path.basename(subdir) == "geometry":
+                if dirname == "geometry":
                     bash("mkdir -p ./{}/geometry".format(folder))
                     for ply_file in glob("{}/*.ply*".format(subdir)):
                         bash("cp {} ./{}/geometry/".format(ply_file, folder))
                     continue
+
+                if dirname == "textures":
+                    bash("cp -r {} ./{}".format(subdir, folder))
+                    continue
+
+                print("skipping {}".format(red("{}/{}".format(folder, dirname))))
 
                 # print("do nothing for {}".format(red(subdir)))
 
